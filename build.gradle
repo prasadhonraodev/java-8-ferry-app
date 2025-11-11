@@ -1,0 +1,40 @@
+group 'ferry'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'ferry.booking.Program'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(
+        'org.json:json:20160212',
+        'commons-io:commons-io:2.4'
+    )
+    testImplementation(
+        'junit:junit:4.12'
+    )
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version,
+                'Main-Class': 'ferry.booking.Program'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task runWeb(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'ferry.booking.WebServer'
+}

@@ -1,0 +1,8 @@
+[
+  {"Id":1,"Name":"Port Ellen","Location":"Isle of Islay, Scotland","Code":"PTE","Facilities":"Restaurant, Shop, Parking"},
+  {"Id":2,"Name":"Oban Bay","Location":"Oban, Scotland","Code":"OBN","Facilities":"Waiting Room, Cafe, Car Park, Ticket Office"},
+  {"Id":3,"Name":"Mallaig Harbor","Location":"Mallaig, Highlands","Code":"MLG","Facilities":"Tourist Info, Restaurant, Parking, WiFi"},
+  {"Id":4,"Name":"Tobermory Port","Location":"Isle of Mull","Code":"TOB","Facilities":"Shops, Cafe, Parking"},
+  {"Id":5,"Name":"Craignure Ferry","Location":"Isle of Mull","Code":"CRG","Facilities":"Waiting Room, Parking, Shop"},
+  {"Id":6,"Name":"Brodick Terminal","Location":"Isle of Arran","Code":"BRD","Facilities":"Restaurant, Shops, Car Park, Tourist Info"}
+]

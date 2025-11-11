@@ -1,0 +1,95 @@
+Welcome to the Ferry Finding System
+=======
+Ferry Time Table
+
+Departures from Port Ellen
+
+ --------------------------------------------------------------------------
+| Time     | Destination   | Journey Time  | Ferry              | Arrives  |
+ --------------------------------------------------------------------------
+| 06:00    | Oban Bay      | 01:15         | MV Caledonian Isles | 07:15    |
+| 08:00    | Oban Bay      | 01:15         | MV Finlaggan       | 09:15    |
+| 11:00    | Oban Bay      | 01:15         | MV Isle of Arran   | 12:15    |
+| 14:00    | Oban Bay      | 01:15         | MV Caledonian Isles | 15:15    |
+| 17:00    | Oban Bay      | 01:15         | MV Isle of Arran   | 18:15    |
+
+Departures from Oban Bay
+
+ --------------------------------------------------------------------------
+| Time     | Destination   | Journey Time  | Ferry              | Arrives  |
+ --------------------------------------------------------------------------
+| 07:00    | Port Ellen    | 01:15         | MV Isle of Arran   | 08:15    |
+| 10:00    | Port Ellen    | 01:15         | MV Caledonian Isles | 11:15    |
+| 13:00    | Port Ellen    | 01:15         | MV Isle of Arran   | 14:15    |
+| 16:00    | Port Ellen    | 01:15         | MV Caledonian Isles | 17:15    |
+
+Departures from Mallaig Harbor
+
+ --------------------------------------------------------------------------
+| Time     | Destination   | Journey Time  | Ferry              | Arrives  |
+ --------------------------------------------------------------------------
+| 06:30    | Mallaig Harbor | 02:00         | MV Loch Fyne       | 08:30    |
+| 09:30    | Mallaig Harbor | 02:00         | MV Loch Fyne       | 11:30    |
+| 12:30    | Mallaig Harbor | 02:00         | MV Loch Fyne       | 14:30    |
+| 15:30    | Mallaig Harbor | 02:00         | MV Loch Fyne       | 17:30    |
+
+Departures from Tobermory Port
+
+ --------------------------------------------------------------------------
+| Time     | Destination   | Journey Time  | Ferry              | Arrives  |
+ --------------------------------------------------------------------------
+
+Departures from Craignure Ferry
+
+ --------------------------------------------------------------------------
+| Time     | Destination   | Journey Time  | Ferry              | Arrives  |
+ --------------------------------------------------------------------------
+
+Departures from Brodick Terminal
+
+ --------------------------------------------------------------------------
+| Time     | Destination   | Journey Time  | Ferry              | Arrives  |
+ --------------------------------------------------------------------------
+Commands are: [search x y hh:mm] book, or list bookings
+  search x y hh:mm
+  book x y
+  list bookings
+  list ports
+
+Book is [book x y]
+where x - journey id
+where y - number of passenger
+
+Search is [search x y hh:mm]
+where: x - origin port id
+where: y - destinationg port id
+where: hh:mm - time to search after
+Ports:
+------
+1 - Port Ellen
+2 - Oban Bay
+3 - Mallaig Harbor
+4 - Tobermory Port
+5 - Craignure Ferry
+6 - Brodick Terminal
+
+Booked
+Booked
+Booked
+[06:00] Port Ellen to Oban Bay -  MV Caledonian Isles (JourneyId : 1, spaces left 120)
+[08:00] Port Ellen to Oban Bay -  MV Finlaggan (JourneyId : 2, spaces left 130)
+[11:00] Port Ellen to Oban Bay -  MV Isle of Arran (JourneyId : 3, spaces left 90)
+[14:00] Port Ellen to Oban Bay -  MV Caledonian Isles (JourneyId : 4, spaces left 120)
+[17:00] Port Ellen to Oban Bay -  MV Isle of Arran (JourneyId : 5, spaces left 90)
+Booked
+Booked
+[06:00] Port Ellen to Oban Bay -  MV Caledonian Isles (JourneyId : 1, spaces left 120)
+[08:00] Port Ellen to Oban Bay -  MV Finlaggan (JourneyId : 2, spaces left 130)
+[11:00] Port Ellen to Oban Bay -  MV Isle of Arran (JourneyId : 3, spaces left 90)
+[14:00] Port Ellen to Oban Bay -  MV Caledonian Isles (JourneyId : 4, spaces left 118)
+[17:00] Port Ellen to Oban Bay -  MV Isle of Arran (JourneyId : 5, spaces left 90)
+Booked
+Cannot book that journey
+Bookings:
+---------
+journey 10 - passengers 2journey 10 - passengers 10journey 10 - passengers 1journey 4 - passengers 2journey 6 - passengers 8journey 5 - passengers 16

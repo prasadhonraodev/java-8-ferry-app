@@ -1,0 +1,43 @@
+{
+  "name": "Ferry App Java 8",
+  "image": "mcr.microsoft.com/devcontainers/java:8",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "8",
+      "installGradle": "true"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ],
+      "settings": {
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-1.8",
+            "path": "/usr/local/sdkman/candidates/java/8.0.432-tem"
+          }
+        ],
+        "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/8.0.432-tem"
+      }
+    }
+  },
+
+  "forwardPorts": [8080],
+  
+  "portsAttributes": {
+    "8080": {
+      "label": "Ferry App",
+      "onAutoForward": "openBrowser"
+    }
+  },
+
+  "postCreateCommand": "chmod +x gradlew && ./gradlew build",
+  
+  "postStartCommand": "nohup ./gradlew runWeb > server.log 2>&1 &",
+
+  "remoteUser": "vscode"
+}

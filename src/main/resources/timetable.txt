@@ -1,0 +1,72 @@
+[
+  {"Id":1,"TimeTableId":1,"OriginId":1,"DestinationId":2,"Time":360,"JourneyTime":75},
+  {"Id":2,"TimeTableId":1,"OriginId":1,"DestinationId":2,"Time":480,"JourneyTime":75},
+  {"Id":3,"TimeTableId":1,"OriginId":1,"DestinationId":2,"Time":660,"JourneyTime":75},
+  {"Id":4,"TimeTableId":1,"OriginId":1,"DestinationId":2,"Time":840,"JourneyTime":75},
+  {"Id":5,"TimeTableId":1,"OriginId":1,"DestinationId":2,"Time":1020,"JourneyTime":75},
+  
+  {"Id":6,"TimeTableId":2,"OriginId":2,"DestinationId":1,"Time":420,"JourneyTime":75},
+  {"Id":7,"TimeTableId":2,"OriginId":2,"DestinationId":1,"Time":600,"JourneyTime":75},
+  {"Id":8,"TimeTableId":2,"OriginId":2,"DestinationId":1,"Time":780,"JourneyTime":75},
+  {"Id":9,"TimeTableId":2,"OriginId":2,"DestinationId":1,"Time":960,"JourneyTime":75},
+  
+  {"Id":10,"TimeTableId":3,"OriginId":2,"DestinationId":3,"Time":390,"JourneyTime":120},
+  {"Id":11,"TimeTableId":3,"OriginId":2,"DestinationId":3,"Time":570,"JourneyTime":120},
+  {"Id":12,"TimeTableId":3,"OriginId":2,"DestinationId":3,"Time":750,"JourneyTime":120},
+  {"Id":13,"TimeTableId":3,"OriginId":2,"DestinationId":3,"Time":930,"JourneyTime":120},
+  
+  {"Id":14,"TimeTableId":4,"OriginId":3,"DestinationId":2,"Time":450,"JourneyTime":120},
+  {"Id":15,"TimeTableId":4,"OriginId":3,"DestinationId":2,"Time":630,"JourneyTime":120},
+  {"Id":16,"TimeTableId":4,"OriginId":3,"DestinationId":2,"Time":810,"JourneyTime":120},
+  {"Id":17,"TimeTableId":4,"OriginId":3,"DestinationId":2,"Time":990,"JourneyTime":120},
+  
+  {"Id":18,"TimeTableId":5,"OriginId":2,"DestinationId":4,"Time":420,"JourneyTime":90},
+  {"Id":19,"TimeTableId":5,"OriginId":2,"DestinationId":4,"Time":540,"JourneyTime":90},
+  {"Id":20,"TimeTableId":5,"OriginId":2,"DestinationId":4,"Time":720,"JourneyTime":90},
+  {"Id":21,"TimeTableId":5,"OriginId":2,"DestinationId":4,"Time":900,"JourneyTime":90},
+  
+  {"Id":50,"TimeTableId":14,"OriginId":4,"DestinationId":2,"Time":450,"JourneyTime":90},
+  {"Id":51,"TimeTableId":14,"OriginId":4,"DestinationId":2,"Time":570,"JourneyTime":90},
+  {"Id":52,"TimeTableId":14,"OriginId":4,"DestinationId":2,"Time":750,"JourneyTime":90},
+  {"Id":53,"TimeTableId":14,"OriginId":4,"DestinationId":2,"Time":930,"JourneyTime":90},
+  
+  {"Id":22,"TimeTableId":6,"OriginId":4,"DestinationId":5,"Time":360,"JourneyTime":45},
+  {"Id":23,"TimeTableId":6,"OriginId":4,"DestinationId":5,"Time":480,"JourneyTime":45},
+  {"Id":24,"TimeTableId":6,"OriginId":4,"DestinationId":5,"Time":600,"JourneyTime":45},
+  {"Id":25,"TimeTableId":6,"OriginId":4,"DestinationId":5,"Time":720,"JourneyTime":45},
+  {"Id":26,"TimeTableId":6,"OriginId":4,"DestinationId":5,"Time":840,"JourneyTime":45},
+  {"Id":27,"TimeTableId":6,"OriginId":4,"DestinationId":5,"Time":960,"JourneyTime":45},
+  
+  {"Id":28,"TimeTableId":7,"OriginId":5,"DestinationId":4,"Time":390,"JourneyTime":45},
+  {"Id":29,"TimeTableId":7,"OriginId":5,"DestinationId":4,"Time":510,"JourneyTime":45},
+  {"Id":30,"TimeTableId":7,"OriginId":5,"DestinationId":4,"Time":630,"JourneyTime":45},
+  {"Id":31,"TimeTableId":7,"OriginId":5,"DestinationId":4,"Time":750,"JourneyTime":45},
+  {"Id":32,"TimeTableId":7,"OriginId":5,"DestinationId":4,"Time":870,"JourneyTime":45},
+  {"Id":33,"TimeTableId":7,"OriginId":5,"DestinationId":4,"Time":990,"JourneyTime":45},
+  
+  {"Id":54,"TimeTableId":15,"OriginId":5,"DestinationId":2,"Time":480,"JourneyTime":135},
+  {"Id":55,"TimeTableId":15,"OriginId":5,"DestinationId":2,"Time":720,"JourneyTime":135},
+  {"Id":56,"TimeTableId":15,"OriginId":5,"DestinationId":2,"Time":960,"JourneyTime":135},
+  
+  {"Id":34,"TimeTableId":8,"OriginId":2,"DestinationId":6,"Time":360,"JourneyTime":105},
+  {"Id":35,"TimeTableId":8,"OriginId":2,"DestinationId":6,"Time":540,"JourneyTime":105},
+  {"Id":36,"TimeTableId":8,"OriginId":2,"DestinationId":6,"Time":720,"JourneyTime":105},
+  {"Id":37,"TimeTableId":8,"OriginId":2,"DestinationId":6,"Time":900,"JourneyTime":105},
+  
+  {"Id":38,"TimeTableId":9,"OriginId":6,"DestinationId":2,"Time":420,"JourneyTime":105},
+  {"Id":39,"TimeTableId":9,"OriginId":6,"DestinationId":2,"Time":600,"JourneyTime":105},
+  {"Id":40,"TimeTableId":9,"OriginId":6,"DestinationId":2,"Time":780,"JourneyTime":105},
+  {"Id":41,"TimeTableId":9,"OriginId":6,"DestinationId":2,"Time":960,"JourneyTime":105},
+  
+  {"Id":42,"TimeTableId":10,"OriginId":3,"DestinationId":4,"Time":480,"JourneyTime":150},
+  {"Id":43,"TimeTableId":10,"OriginId":3,"DestinationId":4,"Time":780,"JourneyTime":150},
+  
+  {"Id":44,"TimeTableId":11,"OriginId":4,"DestinationId":3,"Time":540,"JourneyTime":150},
+  {"Id":45,"TimeTableId":11,"OriginId":4,"DestinationId":3,"Time":840,"JourneyTime":150},
+  
+  {"Id":46,"TimeTableId":12,"OriginId":1,"DestinationId":6,"Time":420,"JourneyTime":180},
+  {"Id":47,"TimeTableId":12,"OriginId":1,"DestinationId":6,"Time":720,"JourneyTime":180},
+  
+  {"Id":48,"TimeTableId":13,"OriginId":6,"DestinationId":1,"Time":480,"JourneyTime":180},
+  {"Id":49,"TimeTableId":13,"OriginId":6,"DestinationId":1,"Time":780,"JourneyTime":180}
+]

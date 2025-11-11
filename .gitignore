@@ -1,0 +1,18 @@
+# Idea files
+.idea/
+*.iml
+
+# Eclipse files
+.classpath
+.project
+
+# Golden Master files
+src/test/resources/*.execution.txt
+
+/.gradle/
+build/
+
+bin/
+classes/
+
+

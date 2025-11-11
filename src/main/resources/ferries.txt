@@ -1,0 +1,14 @@
+[
+  {"Id":1,"Name":"MV Caledonian Isles","Passengers":120,"Vehicles":35,"Weight":50,"HomePortId":1,"Type":"Large Ferry","Speed":18},
+  {"Id":2,"Name":"MV Isle of Arran","Passengers":90,"Vehicles":28,"Weight":40,"HomePortId":2,"Type":"Medium Ferry","Speed":16},
+  {"Id":3,"Name":"MV Hebridean Princess","Passengers":180,"Vehicles":45,"Weight":65,"HomePortId":2,"Type":"Large Ferry","Speed":20},
+  {"Id":4,"Name":"MV Loch Fyne","Passengers":75,"Vehicles":22,"Weight":35,"HomePortId":3,"Type":"Medium Ferry","Speed":15},
+  {"Id":5,"Name":"MV Sound of Mull","Passengers":200,"Vehicles":50,"Weight":75,"HomePortId":4,"Type":"Large Ferry","Speed":19},
+  {"Id":6,"Name":"MV Clansman","Passengers":110,"Vehicles":32,"Weight":45,"HomePortId":5,"Type":"Medium Ferry","Speed":17},
+  {"Id":7,"Name":"MV Lord of the Isles","Passengers":95,"Vehicles":25,"Weight":38,"HomePortId":6,"Type":"Medium Ferry","Speed":16},
+  {"Id":8,"Name":"MV Finlaggan","Passengers":130,"Vehicles":38,"Weight":55,"HomePortId":1,"Type":"Large Ferry","Speed":18},
+  {"Id":9,"Name":"MV Coruisk","Passengers":65,"Vehicles":18,"Weight":28,"HomePortId":3,"Type":"Small Ferry","Speed":14},
+  {"Id":10,"Name":"MV Iona","Passengers":85,"Vehicles":24,"Weight":33,"HomePortId":4,"Type":"Medium Ferry","Speed":15},
+  {"Id":11,"Name":"MV Columba","Passengers":150,"Vehicles":42,"Weight":60,"HomePortId":2,"Type":"Large Ferry","Speed":19},
+  {"Id":12,"Name":"MV Loch Striven","Passengers":100,"Vehicles":30,"Weight":42,"HomePortId":6,"Type":"Medium Ferry","Speed":16}
+]
