@@ -832,8 +832,13 @@ public class WebServer {
     }
     
     private static String formatSearchResults(String result, String origin, String dest) {
-        if (result.contains("No ferries found") || result.contains("Port not found")) {
+        // Check if there's an error or no results
+        if (result == null || result.trim().isEmpty()) {
             return "No ferry services found for the selected route.\n\nPlease try a different route or time.";
+        }
+        
+        if (result.contains("Search is") || result.contains("Error")) {
+            return "Error searching for ferries. Please check your port selections and try again.\n\n" + result;
         }
         
         // Parse and format the results to show available ferries
@@ -842,41 +847,58 @@ public class WebServer {
         sb.append("========================\n\n");
         sb.append("Route: ").append(getPortName(origin)).append(" to ").append(getPortName(dest)).append("\n\n");
         
-        // If we have a valid result, parse it and show available ferries
-        if (result.contains("Available")) {
-            String[] lines = result.split("\n");
-            boolean foundAvailable = false;
+        // Parse the actual output format: [HH:MM] Origin to Destination - Ferry Name (JourneyId : X, spaces left Y)
+        String[] lines = result.split("\n");
+        int ferryCount = 0;
+        
+        for (String line : lines) {
+            line = line.trim();
+            if (line.isEmpty()) continue;
             
-            for (String line : lines) {
-                if (line.trim().startsWith("Journey") && line.contains("Available")) {
-                    foundAvailable = true;
-                    String[] parts = line.split(" ");
-                    if (parts.length >= 6) {
-                        try {
-                            String journeyId = parts[1];
-                            String time = parts[3];
-                            String ferry = line.substring(line.indexOf("on") + 3).trim();
-                            
-                            sb.append("FERRY OPTION ").append(journeyId).append("\n");
-                            sb.append("Departure: ").append(time).append("\n");
-                            sb.append("Ferry: ").append(ferry).append("\n");
-                            sb.append("Status: AVAILABLE\n");
-                            sb.append("Use this ferry by selecting it in the booking form below.\n\n");
-                            sb.append("----------------------------------------\n\n");
-                        } catch (Exception e) {
-                            // Continue with next line if parsing fails
-                        }
-                    }
+            // Look for lines with format [HH:MM] ... (JourneyId : X, spaces left Y)
+            if (line.startsWith("[") && line.contains("JourneyId")) {
+                ferryCount++;
+                try {
+                    // Extract time [HH:MM]
+                    int timeEnd = line.indexOf("]");
+                    String departureTime = line.substring(1, timeEnd);
+                    
+                    // Extract ferry name (between " - " and " (JourneyId")
+                    int ferryStart = line.indexOf(" - ") + 3;
+                    int ferryEnd = line.indexOf(" (JourneyId");
+                    String ferryName = line.substring(ferryStart, ferryEnd).trim();
+                    
+                    // Extract journey ID
+                    int journeyIdStart = line.indexOf("JourneyId : ") + 12;
+                    int journeyIdEnd = line.indexOf(",", journeyIdStart);
+                    String journeyId = line.substring(journeyIdStart, journeyIdEnd).trim();
+                    
+                    // Extract spaces left
+                    int spacesStart = line.indexOf("spaces left ") + 12;
+                    int spacesEnd = line.indexOf(")", spacesStart);
+                    String spacesLeft = line.substring(spacesStart, spacesEnd).trim();
+                    
+                    sb.append("🚢 FERRY OPTION #").append(ferryCount).append("\n");
+                    sb.append("   Departure Time: ").append(departureTime).append("\n");
+                    sb.append("   Ferry: ").append(ferryName).append("\n");
+                    sb.append("   Available Seats: ").append(spacesLeft).append("\n");
+                    sb.append("   Journey ID: ").append(journeyId).append("\n");
+                    sb.append("   Status: ✅ AVAILABLE\n\n");
+                    sb.append("----------------------------------------\n\n");
+                } catch (Exception e) {
+                    // If parsing fails, show the raw line
+                    sb.append("   ").append(line).append("\n\n");
                 }
             }
-            
-            if (!foundAvailable) {
-                sb.append("Multiple ferry services operate on this route.\n");
-                sb.append("Proceed with booking to confirm availability.\n\n");
-            }
+        }
+        
+        if (ferryCount == 0) {
+            sb.append("No ferry services found for this route at the requested time.\n");
+            sb.append("Please try a different time or check the timetable.\n\n");
+            sb.append("Debug Info:\n").append(result);
         } else {
-            sb.append("Ferry services are available on this route.\n");
-            sb.append("Use the booking form below to reserve your passage.\n\n");
+            sb.append("Found ").append(ferryCount).append(" available ferry service(s).\n");
+            sb.append("Use the booking form below to reserve your passage.\n");
         }
         
         return sb.toString();
